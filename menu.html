@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LB College Canteen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: #007bff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        .canteen-logo {
+            width: 350px;
+            height: 300px;
+            padding: 10px;
+            display: block;
+            margin: auto;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto;
+            gap: 20px;
+        }
+
+        .rotating-image {
+            width: 300px;
+            height: 250px;
+            border-radius: 100%;
+            margin: 200px;
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 600px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .menu-item {
+            position: auto;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Hide description by default */
+        .menu-item h3, .menu-item p {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Show description only on hover */
+        .menu-item:hover h3, 
+        .menu-item:hover p {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body background="bg7.jpeg" width="100%" height="100%">
+    <img src="C:\Users\ragha\Pictures\Saved Pictures\logo.jpeg" alt="LB College Canteen" class="canteen-logo">
+    <div class="navbar">
+        <a href="canteen.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+	<a href="services.html">Services</a>
+    </div>
+
+<h1 style="font-family: 'Poppins', sans-serif; font-size: 75px; font-weight: bold; color: #007bff; text-align: center; letter-spacing: 2px;">
+🍽 LB Dishes</h1>
+
+    <div class="container">
+        <img src="C:\Users\ragha\Pictures\Saved Pictures\all items.jpg" class="rotating-image">
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide"><img src="C:\Users\ragha\Pictures\Saved Pictures\make1.jpg" alt="Food 1"></div>
+                <div class="slide"><img src="C:\Users\ragha\Pictures\Saved Pictures\make2.jpg" alt="Food 2"></div>
+                <div class="slide"><img src="C:\Users\ragha\Pictures\Saved Pictures\make3.webp" alt="Food 3"></div>
+                <div class="slide"><img src="C:\Users\ragha\Pictures\Saved Pictures\make4.jpg" alt="Food 4"></div>
+                <div class="slide"><img src="C:\Users\ragha\Pictures\Saved Pictures\make5.webp" alt="Food 5"></div>
+                <div class="slide"><img src="C:\Users\ragha\Pictures\Saved Pictures\make.webp" alt="Food 6"></div>
+            </div>
+            <button class="slider-btn prev" onclick="prevSlide()">&#10094;</button>
+            <button class="slider-btn next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\dosa.jpg" alt="Dosa">
+            <h3>Dosa</h3>
+            <p>Crispy South Indian crepe made from fermented rice and lentil batter.</p>
+        </div>
+        <div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\chitranna.jpg" alt="Chitranna">
+            <h3>Chitranna</h3>
+            <p>Tangy and spicy lemon rice.</p>
+        </div>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\meal.jpeg" alt="meal">
+            <h3>Meal</h3>
+            <p>Soft and fluffy steamed idlis.</p>
+        </div>
+	<div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\idli.jpg" alt="Idli">
+            <h3>Idli</h3>
+            <p>Soft and fluffy steamed idlis.</p>
+        </div>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\friedrice.jpeg" alt="Fried Rice">
+            <h3>Fried Rice</h3>
+            <p>Tasty and yummy veg fried rice with lot of healthy veggies.</p>
+        </div>
+        <div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\meal2.jpeg" alt="special meal">
+            <h3>Speacial Meal</h3>
+            <p>A special south indian full meal with some more tasty special items.</p>
+        </div>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\chapathi.jpg" alt="Chapati">
+            <h3>Chapati</h3>
+            <p>Soft and healthy Indian bread made from wheat flour.</p>
+        </div>
+	<div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\veg-biryani.jpeg" alt="veg biryani">
+            <h3>Veg biryani</h3>
+            <p>Tasty and healthy veg biryani with special added magic masala.</p>
+        </div>
+    </div>
+    <div class="menu-grid">
+	<div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\pav-bhaji.jpeg" alt="Pav-Bhaji">
+            <h3>Pav-Bhaji</h3>
+            <p>Spicy and tasty street style pav-bhaji with original preparation method.</p>
+        </div>
+	<div class="menu-item">
+            <img src="C:\Users\ragha\Pictures\Saved Pictures\gobi.jpeg" alt="Gobi">
+            <h3>Gobi</h3>
+            <p>Crispy and Spicy Gobi with no added food colors and taste makers.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector(".slides");
+        const totalSlides = document.querySelectorAll(".slide").length;
+
+        function showSlide(index) {
+            if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+    </script>
+
+ <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 LB College Canteen. All Rights Reserved.
+    </div>
+</body>
+</html>
