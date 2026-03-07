@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LB College Canteen</title>
+<style>
+      /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #007bff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #0056b3;
+    border-radius: 5px;
+}
+
+/* Header */
+h2 {
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Contact Form */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* About Section */
+.about_section {
+    padding: 20px;
+    background: white;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.about_section a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.about_section a:hover {
+    background: #0056b3;
+}
+
+/* Specialties Section */
+.specialties_section {
+    padding: 20px;
+    background: #ffffff;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.specialties_section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.specialties_section ul li {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #007bff;
+    font-size: 30px;
+    margin: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+</style>
+</head>
+<body background="bg6.jpeg" width="100%" height="100%">
+
+    <!-- Header Section -->
+   <img src="C:\Users\ragha\Pictures\Saved Pictures\logo.jpeg" alt="LB College Canteen" width="350" padding="20">
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="canteen.html">Home</a>
+        <a href="about.html">About Us</a>
+   	<a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+	<a href="services.html">Services</a>
+    </div>
+/
+    <hr>
+
+   <div class="container">
+    <h2>Contact Us</h2>
+   <form onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone">
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject">
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address"></textarea>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+
+    <hr>
+    <p>Contact: +91 9965432245 | Email:raghavipatil@gmail.com</p>
+<div class="social-icons">
+    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
+
+<script>
+    function validateForm() {
+        let name = document.getElementById("name").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let subject = document.getElementById("subject").value.trim();
+        let message = document.getElementById("message").value.trim();
+
+        if (name === "" || phone === "" || subject === "" || message === "") {
+            alert("All fields are required!");
+            return false; // Prevent form submission
+        }
+
+        // Check phone number format (only digits, 10 characters)
+        let phonePattern = /^[0-9]{10}$/;
+        if (!phonePattern.test(phone)) {
+            alert("Enter a valid 10-digit phone number!");
+            return false;
+        }
+
+        alert("Submission Successful!"); // Show success message
+        return true; // Allow form submission
+    }
+</script>
+
+ <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 LB College Canteen. All Rights Reserved.
+    </div>
+</body>
+</html>
